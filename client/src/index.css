@@ -1,13 +1,289 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:wght@700;400&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* font-family: 'Poppins', sans-serif; */
+/*font-family: 'Playfair', serif; */
+
+/*navbar css*/
+.navbar{
+  font-family: 'Poppins', sans-serif; 
+  font-size: 17px;
+  line-height: 28px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px gray;
+  --webkit-box-shadow:0 8px 6px -6px gray;
+  border-bottom:  solid gray !important;
+}
+
+.nav-link{
+  font-weight: 300 !important;
+}
+
+.active{
+  border-bottom: 2px solid black;
+}
+
+.navbar-brand{
+  font-weight: 700;
+  font-family: 'roboto', sans-serif;
+  letter-spacing: 3px;
+}
+
+/*
+=======Footer===  */
+.footer{
+  background-color: #212121;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: aliceblue;
+  padding: 10px;
+}
+
+/*Page Not found*/
+.pnf{
+  display: flex;
+  min-height: 65vh;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f4f4f4;
+  align-items: center;
+}
+
+.pnf-title{
+  font-size: 100px;
+  font-weight: 700;
+  
+}
+
+.pnf-heading{
+  
+  font-weight: normal;
+}
+
+.pnf-btn{
+ 
+  color: black;
+  padding: 10px ;
+  border: 1px solid black;
+  margin-top: 10px;
+  text-decoration: none;
+  
+}
+
+/* Contact.css */
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.contact-item h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+/* About.css */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  text-align: center; /* Center text inside the container */
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+/* Policy.css */
+.policy-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+strong {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* Register.css */
+.register-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Login.css */
+.login-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
 }
